@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prontu! — Suporte</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #ffffff;
+      --surface: #f7f7f7;
+      --border: #e5e5e5;
+      --text: #1a1a1a;
+      --muted: #6b6b6b;
+      --accent: #2563eb;
+      --radius: 10px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    header {
+      padding: 56px 24px 40px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 24px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 6px 16px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    nav a:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    section {
+      margin-bottom: 72px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    section > h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      margin-bottom: 4px;
+    }
+
+    .updated {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .intro-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .intro-box strong {
+      color: var(--text);
+    }
+
+    .article {
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      margin-top: 28px;
+    }
+
+    .article:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .article h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .article p {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .article ul {
+      margin: 8px 0 10px 20px;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    .article ul li {
+      margin-bottom: 6px;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #eff6ff;
+      color: var(--accent);
+      border-radius: 6px;
+      padding: 2px 8px;
+      margin-bottom: 10px;
+    }
+
+    .faq-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 24px;
+    }
+
+    .faq-block h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .faq-block p {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .contact-section {
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid var(--border);
+      margin-top: 40px;
+    }
+
+    .contact-section h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-section p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .contact-section a {
+      display: inline-block;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      border: 1px solid var(--accent);
+      padding: 10px 24px;
+      border-radius: 999px;
+      transition: background 0.15s, color 0.15s;
+    }
+
+    .contact-section a:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.8rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Prontu!</h1>
+    <p>Página de Suporte e Informações Legais</p>
+  </header>
+
+  <nav>
+    <a href="#termos">Termos de Uso</a>
+    <a href="#privacidade">Política de Privacidade</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <main>
+
+    <!-- TERMOS DE USO -->
+    <section id="termos">
+      <span class="section-label">Legal</span>
+      <h2>Termos e Condições de Uso</h2>
+      <p class="updated">Última atualização: 28 de abril de 2026</p>
+
+      <div class="intro-box">
+        Estes Termos Legais constituem um acordo juridicamente vinculante entre você (<strong>Usuário</strong>) e o <strong>Prontu!</strong>, relacionado ao seu acesso e uso dos Serviços. Ao acessar os Serviços, você confirma que leu, compreendeu e concordou em ficar vinculado a estes Termos. <strong>SE VOCÊ NÃO CONCORDAR, ESTÁ EXPRESSAMENTE PROIBIDO DE USAR OS SERVIÇOS.</strong>
+      </div>
+
+      <div class="article">
+        <h3>1. Natureza dos Serviços e LGPD</h3>
+        <p>O Prontu! opera como uma ferramenta de produtividade para o usuário.</p>
+        <p><strong>Responsabilidade de Dados (Controlador):</strong> Nos termos da Lei Geral de Proteção de Dados (Lei nº 13.709/2018 — LGPD), o Usuário é o único Controlador dos dados inseridos (nome, contato, histórico de saúde).</p>
+        <p><strong>Autorização Expressa:</strong> O Usuário é o único responsável por adquirir a autorização expressa, livre e informada de seus pacientes/clientes antes de inserir qualquer dado na plataforma. O Prontu! isenta-se de qualquer responsabilidade pela falta de base legal ou consentimento na coleta desses dados.</p>
+        <p><strong>Finalidade:</strong> As informações fornecidas não se destinam à distribuição em jurisdições onde tal uso seja contrário à lei.</p>
+      </div>
+
+      <div class="article">
+        <h3>2. Direitos de Propriedade Intelectual e Submissões</h3>
+        <p>Somos proprietários ou licenciados de todos os direitos de propriedade intelectual sobre nossos Serviços (código-fonte, funcionalidades, IA local e Marcas).</p>
+        <p><strong>Suas Submissões:</strong> Antes de adicionar pacientes e conteúdos, você deve registrar formalmente a permissão de uso. Você é o único responsável por suas Submissões e concorda em nos indenizar por perdas decorrentes de:</p>
+        <ul>
+          <li>Violação de direitos de terceiros (ex.: privacidade do paciente);</li>
+          <li>Violação de leis aplicáveis (ex.: LGPD ou sigilo profissional);</li>
+          <li>Uso indevido dos campos de texto para armazenamento de dados sensíveis sem a devida cautela.</li>
+        </ul>
+      </div>
+
+      <div class="article">
+        <span class="tag">Privacy by Design</span>
+        <h3>3. Segurança e Inteligência Artificial (IA On-Device)</h3>
+        <p>O Prontu! utiliza tecnologia de ponta para garantir a privacidade, operando sob o conceito de <strong>Privacy by Design</strong>:</p>
+        <p><strong>Processamento Local:</strong> O histórico de atendimentos e relatórios gerados via Foundation Models são processados exclusivamente de forma local no dispositivo do Usuário. Nenhum dado de paciente é enviado para servidores externos para treinamento de IA.</p>
+        <p><strong>Acesso Biométrico:</strong> Para proteger as informações salvas, o app solicita obrigatoriamente a autenticação via Face ID/Biometria do dispositivo. O Usuário é responsável por manter essa trava ativa e não compartilhar o acesso ao seu dispositivo.</p>
+      </div>
+
+      <div class="article">
+        <h3>4. Declarações e Atividades Proibidas</h3>
+        <p>Ao utilizar os Serviços, você declara que:</p>
+        <ul>
+          <li>Possui capacidade legal e profissional (ex.: registro no conselho de classe como CREFITO) para realizar os atendimentos registrados;</li>
+          <li>Não utilizará os Serviços para qualquer finalidade ilegal;</li>
+          <li>Não tentará realizar engenharia reversa no software ou contornar as medidas de segurança.</li>
+        </ul>
+      </div>
+
+      <div class="article">
+        <h3>5. Dispositivos Apple</h3>
+        <p>Ao utilizar o Aplicativo via App Store:</p>
+        <ul>
+          <li>A licença é intransferível e limitada ao uso de acordo com as regras das Distribuidoras;</li>
+          <li>O Usuário reconhece que as Distribuidoras não possuem obrigação de suporte técnico, sendo esta responsabilidade exclusiva do Prontu!;</li>
+          <li>O Usuário declara não estar em países sob embargo ou listas de restrição internacional.</li>
+        </ul>
+      </div>
+
+      <div class="article">
+        <h3>6. Indenização e Limitação de Responsabilidade</h3>
+        <p>O Prontu! não será responsável por:</p>
+        <ul>
+          <li>Decisões clínicas ou diagnósticos baseados nos relatórios gerados pela IA;</li>
+          <li>Perda de dados decorrente de danos no hardware do Usuário (visto que o processamento é local);</li>
+          <li>Acesso não autorizado por terceiros caso o Usuário não utilize as travas de segurança do dispositivo;</li>
+          <li>Cumprimento de prazos de guarda de prontuário exigidos por lei (o app é uma ferramenta de apoio, não um arquivo público de saúde).</li>
+        </ul>
+      </div>
+
+      <div class="article">
+        <h3>7. Disposições Gerais</h3>
+        <p>Estes termos são regidos pelas leis da República Federativa do Brasil.</p>
+      </div>
+    </section>
+
+    <!-- POLÍTICA DE PRIVACIDADE -->
+    <section id="privacidade">
+      <span class="section-label">Privacidade</span>
+      <h2>Política de Privacidade</h2>
+      <p class="updated">Última atualização: 28 de abril de 2026</p>
+
+      <div class="intro-box">
+        Este Aviso de Privacidade descreve como e por que podemos acessar, coletar, armazenar, usar e/ou compartilhar informações pessoais quando você utiliza nossos serviços. Se você não concorda com nossas políticas e práticas, por favor, não utilize nossos Serviços.
+      </div>
+
+      <div class="faq-block">
+        <h4>Quais informações pessoais nós processamos?</h4>
+        <p>Quando você usa nossos Serviços, podemos processar informações pessoais dependendo de como você interage conosco, das escolhas que você faz e dos produtos e recursos que utiliza.</p>
+      </div>
+
+      <div class="faq-block">
+        <h4>Processamos informações pessoais sensíveis?</h4>
+        <p>Algumas informações podem ser consideradas "especiais" ou "sensíveis" em certas jurisdições, como, por exemplo, dados de saúde.</p>
+      </div>
+
+      <div class="faq-block">
+        <h4>Como processamos suas informações?</h4>
+        <p>Processamos informações para fornecer, melhorar e administrar nossos Serviços, para fins de segurança e prevenção de fraudes e para cumprir a lei. Também podemos processar dados para outros fins mediante seu consentimento.</p>
+      </div>
+
+      <div class="article">
+        <h3>1. Quais informações nós coletamos?</h3>
+        <p>Coletamos informações pessoais que você fornece voluntariamente ao usar nossos Serviços, ao expressar interesse em obter informações sobre nós ou nossos produtos, ao participar de atividades nos Serviços ou ao entrar em contato conosco.</p>
+        <p>Todas as informações pessoais fornecidas devem ser verdadeiras, completas e precisas. Você precisa coletar a autorização dos seus pacientes para registrar e armazenar informações pessoais e de saúde no aplicativo.</p>
+      </div>
+
+      <div class="article">
+        <h3>2. Como processamos suas informações?</h3>
+        <p>Processamos informações para fornecer, melhorar e administrar nossos Serviços, nos comunicar com você, para fins de segurança e prevenção de fraudes e para cumprir a lei.</p>
+        <p>Processamos informações pessoais para implementação de sugestões automáticas a partir do Foundation Models (IA on-device da Apple) e para armazenar o histórico de atendimentos por paciente.</p>
+      </div>
+
+      <div class="article">
+        <h3>3. Quando e com quem compartilhamos suas informações?</h3>
+        <p><strong>Não compartilhamos informações pessoais com terceiros.</strong></p>
+      </div>
+
+      <div class="article">
+        <h3>4. Suas informações são transferidas internacionalmente?</h3>
+        <p>As informações podem ser processadas, armazenadas e usadas fora do país em que você está localizado. As leis de privacidade de dados variam entre as jurisdições, e diferentes leis podem ser aplicáveis aos seus dados, dependendo de onde eles são processados, armazenados ou usados.</p>
+      </div>
+
+      <div class="article">
+        <h3>5. Por quanto tempo mantemos suas informações?</h3>
+        <p>A exclusão dos dados pode ser realizada a qualquer momento pelo fisioterapeuta. As informações ficarão armazenadas enquanto o fisioterapeuta não realizar a exclusão, que será possível a partir da solicitação do paciente.</p>
+        <p>Após a exclusão dos dados, não é possível acessá-los novamente.</p>
+      </div>
+
+      <div class="article">
+        <h3>6. Coletamos informações de menores de idade?</h3>
+        <p>Não coletamos intencionalmente dados de crianças menores de 18 anos, nem fazemos marketing para elas. Caso o fisioterapeuta/usuário inclua dados de menores de idade, compromete-se a pedir a autorização dos responsáveis para registrar e armazenar os dados no aplicativo.</p>
+      </div>
+
+      <div class="article">
+        <h3>7. Quais são os seus direitos de privacidade?</h3>
+        <p>Você pode revisar, alterar ou encerrar sua conta a qualquer momento.</p>
+        <p>O paciente tem o direito de revogar o consentimento para uso dos seus dados a qualquer momento. A partir da solicitação do paciente, o fisioterapeuta/usuário fica obrigado a excluir os dados do paciente no aplicativo. Isso não afetará a legalidade do processamento realizado antes da revogação.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="contact-section" id="contato">
+    <h2>Precisa de ajuda?</h2>
+    <p>Entre em contato com o suporte do Prontu! para dúvidas sobre os termos, privacidade ou uso do aplicativo.</p>
+    <a href="mailto:cauecarneiroc@gmail.com">cauecarneiroc@gmail.com</a>
+  </div>
+
+  <footer>
+    &copy; 2026 Prontu! &mdash; Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
